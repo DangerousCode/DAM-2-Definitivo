@@ -1,0 +1,48 @@
+package ejercicios;
+import org.jdom2.*;
+import org.jdom2.input.SAXBuilder;
+import java.util.*;
+public class Ejercicio2 {
+
+	public static void main(String[] args) {
+		try{
+			SAXBuilder builder=new SAXBuilder();
+			Document doc=builder.build("vehiculos.xml");
+			Element root=doc.getRootElement();
+			System.out.println(root.getName());
+			
+			Element terrestres=root.getChild("Terrestres");
+			System.out.println(terrestres.getName());
+			
+			List vterrestres=terrestres.getChildren("Vehiculo");
+			Iterator it=vterrestres.iterator();
+			while(it.hasNext()){
+				Element vt=(Element)it.next();
+				System.out.print("<"+vt.getName()+">"+vt.getText()+"\n");
+			}
+			
+			Element acuaticos=root.getChild("Acuaticos");
+			System.out.println(acuaticos.getName());
+			
+			List vacuaticos=acuaticos.getChildren("Vehiculo");
+			Iterator it2=vacuaticos.iterator();
+			while(it2.hasNext()){
+				Element va=(Element)it.next();
+				System.out.println("<"+va.getName()+">"+va.getText());
+			}
+			
+			Element aereos=root.getChild("Aereos");
+			System.out.println(aereos.getName());
+			
+			List vaereos=aereos.getChildren("Vehiculo");
+			Iterator it3=vaereos.iterator();
+			while(it3.hasNext()){
+				Element vae=(Element)it3.next();
+				System.out.println("<"+vae.getValue()+">"+vae.getText());
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+
+}

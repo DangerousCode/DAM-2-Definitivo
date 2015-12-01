@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+    <campos>
+        <campo nombre="Sagrarios Infernales"
+
+            descripcion="La corrupción demoníaca amenaza los Jardines de la esperanza. Invocados por medio de Sagrarios, merodean por el campo de batalla los Castigadores, criaturas implacables cuya única pasión es destruir héroes. Derrota a los Guardianes del Sagrario antes que tus enemigos, y el próximo Castigador luchará para ti. Falla, y tendrás que enfrentarte a su ira demoníaca."
+
+            objetivo="Activa los sagrarios: Los Sagrarios infernales acumulan poder periódicamente. Actívalos y prepárate para la pelea.
+            Derrota a los Guardianes: Asesina 30 Guardianes antes que el enemigo para invocar un poderoso Castigador.
+            Cuídate del Castigador: Cada Castigador tiene uno de tres poderes devastadores posibles. ¡Ten cuidado!, siempre concentran sus ataques sobre los héroes."
+
+            bg="uno">
+
+        </campo>
+        <campo nombre="Campo de Batalla de la Eternidad"
+
+            descripcion="Los Cielos Superiores y los Infiernos Ardientes chocan, literalmente, en un campo de batalla que representa su eterna lucha. Dos Inmortales, guerreros ancestrales enfrascados en un duelo a muerte, necesitan tu ayuda para prevalecer. Derrota al Inmortal enemigo y avanzarás sobre suelo sagrado o profano, directo al bastión de tus adversarios."
+
+            objetivo="Entabla Combate Inmortal: Dos Inmortales luchan en el centro del mapa. Ayuda a que tu Inmortal prevalezca y arrasa los Fuertes enemigos.
+            Emplea Tácticas Eternas: Protege a tu Inmortal eliminando al equipo enemigo, o desciende sobre el Inmortal enemigo con furia implacable.
+            Contrata Mercenarios Únicos: Refuerza tus tropas con Chamanes Caídos y astutos Empaladores, que prestarán sus poderes a tu causa."
+
+            bg="dos">
+
+        </campo>
+        <campo nombre="Tumba de la Reina Araña"
+
+            descripcion="Las olvidadas tumbas de Luxoria han encontrado una nueva dueña. En las profundidades de las antiguas salas, la Reina araña, Neithis, despierta de su sueño ancestral. Entrégale las gemas poderosas que ella busca, y podrás escapar con tu vida."
+
+            objetivo="Recoge Gemas: Las arañas y héroes enemigos sueltan gemas mágicas cuando mueren. Reúne la mayor cantidad posible.
+            Entrega Gemas: ¡Entrega tus gemas en uno de los altares de la Reina araña! Si mueres, las dejarás caer.
+            Invoca las Tejerredes: El primer equipo que entregue la cantidad requerida de gemas liberará a las tejerredes, que los ayudarán a destruir las defensas enemigas."
+
+            bg="tres">
+
+        </campo>
+        <campo nombre="Templo celeste"
+
+            descripcion="El Templo celeste flota sobre los vastos desiertos de Luxoria, fungiendo como el centro de adoración de Ka, el dios serpentino. Ka guardó su gran poder dentro de los templos, con guardianes protectores vigilando cada uno. Con tales defensas, ningún guerrero pensaría robarse el poder del dios. ¿Cierto?"
+
+            objetivo="Captura los Templos: Los templos se activan periódicamente. ¡Ubícate en sus perímetros y captura su poder!
+            Conserva los Templos: Manten tu posición y el templo desatará un ataque abrasador en contra de las bases enemigas.
+            Defiende los Templos: Los guardianes intentarán recuperar el control de los templos apropiados por tu equipo. Defiéndelos para que tu equipo conserve el poder de los
+            templos."
+
+            bg="cuatro">
+
+        </campo>
+        <campo nombre="Jardín del Terror"
+
+            descripcion="Otrora, los jardines reales eran algo digno de verse, pero una sombra ha caído sobre ellos... Zarcillos torcidos se deslizan por la tierra durante la noche y varios sirvientes han desaparecido al deambular por sus sinuosas veredas. La Reina Sombranegra dice no saber nada de los incidentes, pero algunos sospechan que ha enloquecido."
+
+            objetivo="Derrota a los reptantes: Al caer la noche, los temibles reptantes germinan en el jardín.
+            Recolecta Semillas: Mata a los reptantes y recolecta sus semillas malignas para tu equipo.
+            Invoca el Terror agreste: Regresa a este punto cuando tengas al menos 100 semillas para invocar y controlar un horror de jardín para luchar por tu equipo."
+
+            bg="cinco">
+
+        </campo>
+        <campo nombre="Bahía de Almanegra"
+
+            descripcion="Almanegra, el pirata fantasma, ha tomado el reino de Puerto Niebla. Su escandalosa tripulación no muerta tomó el otrora próspero mercado y lo convirtió en su nueva guarida de vicios y vileza."
+
+            objetivo="Recolecta doblones: Destruye Cofres de Tesoro, Mercenarios, y Esqueletos para recolectar doblones.
+            Entrega doblones: ¡Entrégale tus doblones a Almanegra o los perderás al morir!
+            Abre fuego a tus enemigos: Una vez que tu equipo le entregue suficientes doblones a Almanegra, éste apuntará sus cañones contra tus enemigos y abrirá fuego."
+
+            bg="seis">
+
+        </campo>
+        <campo nombre="Comarca del Dragón"
+
+            descripcion="Los exuberantes y engañosamente pacíficos jardines de la Comarca del Dragón han crecido con el paso del tiempo, cubriendo el reino de fuego antes conocido como la Espira del Dragón. Debajo de este paraíso verde fue sellado el ancestral poder del Caballero dragontino... quien no ha olvidado ni perdonado los insultos de aquellos que le agraviaron."
+
+            objetivo="Controla los Sagrarios: Existen dos sagrarios que tu equipo debe controlar para invocar al Caballero dragontino.
+            Libera al Caballero dragontino: Si tu equipo controla ambos sagrarios, podrás usar esta sencilla estatua para controlar al imponente Caballero dragontino.
+            Devasta los Fuertes del Enemigo: Utiliza el inmenso poder del Caballero dragontino para destruir las bases enemigas."
+
+            bg="siete">
+
+        </campo>
+        <campo nombre="Minas Embrujadas"
+
+            descripcion="Lejos de la Hondonada maldita, en los lindes de la Corte del Cuervo, yacen las Minas Embrujadas. Selladas bajo un cementerio sombrío, los no muertos constantemente claman ser liberados del sitio que funge como su prisión terrenal."
+
+            objetivo="Arriésgate Bajo Tierra: Las Minas Embrujadas abrirán periódicamente con un ejército no-muerto debajo.
+            Recolecta los cráneos: ¡Destruye el ejército no-muerto y recolecta sus cráneos para potenciar tus gólems!
+            Desencadena los Gólems: Cuando el ejército de no muertos haya sido derrotado, los gólems serán invocados para ambos equipos. Recuerda: más cráneos, gólem más fuerte."
+
+            bg="ocho">
+
+        </campo>
+        <campo nombre="Hondonada maldita"
+
+            descripcion="Como uno de los primeros, y más antiguos, reinos en ser absorbidos por el Nexo, la Corte del Cuervo ha prosperado por milenios. La Hondonada maldita, una extensión de aldeas y tierras de cultivo sirve como campo de pruebas perfecto para los héroes de la tormenta."
+
+            objetivo="Recoge Tributos: Lord Cuervo creará tributos regularmente. ¡Recógelos para tu equipo!
+            Maldice A Tus Enemigos: Al obtener tres tributos, Lord Cuervo maldecirá a tus enemigos.
+            Fuertes y Esbirros Malditos: Los fuertes malditos no atacarán, y los esbirros bajo los efectos de la maldición sólo tendrán 1 punto de vida."
+
+            bg="nueve">
+
+        </campo>
+    </campos>

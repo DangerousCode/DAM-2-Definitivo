@@ -1,0 +1,11 @@
+package calculos;
+
+public class Compara {
+	int mayor;
+	Compara(){
+
+	}
+	public void setMayor(int mayor){
+		this.mayor=mayor;
+	}
+}

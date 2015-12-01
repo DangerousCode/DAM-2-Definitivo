@@ -1,0 +1,46 @@
+package calculos;
+import java.util.*;
+public class Calculos {
+	public static void main(String[] args)throws InterruptedException{
+		final int parametro=8;
+		int numeros=parametro*4;
+		int[] array=new int[numeros];
+		Random rand=new Random();
+
+		for(int i=0;i<numeros;i++){
+			array[i]=rand.nextInt();
+		}
+		
+		int mayor=array[0];
+		int menor=array[0];
+		Compara[] compara=new Compara[4];
+		Hilo[] hilo=new Hilo[4];
+		
+		for(int i=0;i<4;i++){
+			compara[i]=new Compara(array[0],array[0]);
+			hilo[i]=new Hilo(array,compara[i],numeros,parametro);
+			numeros=numeros-parametro;
+		}
+		
+		for(int i=0;i<4;i++){
+			hilo[i].start();
+		}
+		
+		for(int i=0;i<4;i++){
+			hilo[i].join();
+		}
+		
+		for(int i=0;i<4;i++){
+			System.out.println("Numero: "+compara[i].mayor);
+			if(compara[i].mayor>mayor){
+				mayor=compara[i].mayor;
+			}
+			if(compara[i].mayor<menor){
+				menor=compara[i].mayor;
+			}
+		}
+		
+		System.out.println("\nEl mayor de los cuatro es: "+mayor);
+		System.out.println("El menor de los cuatro es: "+menor);
+	}
+}

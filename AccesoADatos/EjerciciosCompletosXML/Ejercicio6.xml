@@ -1,0 +1,14 @@
+<tables>
+<tabla >
+<campo>
+<nombre>id</nombre>
+<tipo>integer</tipo>
+<valor>1</valor>
+</campo>
+<campo>
+<nombre>dato</nombre>
+<tipo>char</tipo>
+<valor>@</valor>
+</campo>
+</tabla>
+</tables>

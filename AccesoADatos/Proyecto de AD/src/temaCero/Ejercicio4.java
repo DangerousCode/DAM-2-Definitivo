@@ -1,0 +1,32 @@
+package temaCero;
+
+import java.util.HashMap;
+
+import herramientas.Herramientas;
+
+public class Ejercicio4 {
+	public static void main(String[] args){
+		HashMap<String,String> agenda=new HashMap<String,String>();
+		agenda.put("Doctor", "(+52)-4000-5000");
+		agenda.put("Hermano", "(575)-2042-3233");
+		agenda.put("Tio", "(421)-1010-0020");
+		agenda.put("Suegros", "(334)-6105-4334");
+		agenda.put("Oficina", "(304)-5205-8454");
+		agenda.put("Abogado", "(756)-1205-3454");
+		agenda.put("Papa", "(55)-9555-3270");
+		agenda.put("Tienda", "(874)-2400-8600");
+		
+		Herramientas.recorrerMapString(agenda);
+		
+		String[] personas={"Tio","Suegros","Abogado"};
+		
+		agenda.remove(personas[0]);
+		agenda.remove(personas[1]);
+		agenda.remove(personas[2]);
+		
+		System.out.println("");
+		
+		Herramientas.recorrerMapString(agenda);
+		
+	}
+}

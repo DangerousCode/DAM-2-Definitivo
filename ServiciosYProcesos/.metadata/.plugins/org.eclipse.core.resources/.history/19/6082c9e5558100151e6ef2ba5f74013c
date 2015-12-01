@@ -1,0 +1,9 @@
+package robots;
+
+public class Paquete {
+
+	public Paquete() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

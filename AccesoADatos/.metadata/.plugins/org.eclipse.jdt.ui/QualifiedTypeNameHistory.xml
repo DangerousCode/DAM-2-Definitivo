@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="temaUnoSerializacion.Metodos1"/>
+<fullyQualifiedTypeName name="org.w3c.dom.Element"/>
+<fullyQualifiedTypeName name="java.util.Iterator"/>
+<fullyQualifiedTypeName name="java.awt.List"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="org.jdom2.xpath.XPathExpression"/>
+<fullyQualifiedTypeName name="org.jdom2.Element"/>
+<fullyQualifiedTypeName name="org.jdom2.filter.Filters"/>
+<fullyQualifiedTypeName name="org.jaxen.expr.XPathFactory"/>
+<fullyQualifiedTypeName name="org.jdom2.xpath.XPathFactory"/>
+<fullyQualifiedTypeName name="java.io.FileOutputStream"/>
+<fullyQualifiedTypeName name="org.jdom2.Document"/>
+<<<<<<< HEAD
+<fullyQualifiedTypeName name="herramientas.Herramientas"/>
+=======
+<fullyQualifiedTypeName name="org.jdom2.input.SAXBuilder"/>
+<fullyQualifiedTypeName name="org.jdom2.output.XMLOutputter"/>
+>>>>>>> origin/master
+</qualifiedTypeNameHistroy>

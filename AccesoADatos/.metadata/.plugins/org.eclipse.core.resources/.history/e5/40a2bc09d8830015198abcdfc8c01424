@@ -1,0 +1,24 @@
+<menu>
+	<comida plato="primero">
+		<tipoplato carateristica="entrenates">
+			<nombre>sopacaliente</nombre>
+			<nombre>ensalada de rucula lechuga</nombre>
+		</tipoplatos>
+	</comida>
+	<comida plato="segundo">
+		<tipoplatos carateristica="calientes">
+			<nombre>carne plancha</nombre>
+			<nombre>salmon a las tres salsas</nombre>
+			<nombre>codillo</nombre>
+			<nombre>lubina a la sal</nombre>
+		</tipoplatos>
+	</comida>
+	<comida plato="postre">
+		<tipoplatos carateristica="calientes o frios">
+			<nombre>arroz con leche</nombre>
+			<nombre>flan</nombre>
+			<nombre>helado de chocolate</nombre>
+			<nombre>crema con nueces</nombre>
+		</tipoplatos>
+	</comida>
+</menu>

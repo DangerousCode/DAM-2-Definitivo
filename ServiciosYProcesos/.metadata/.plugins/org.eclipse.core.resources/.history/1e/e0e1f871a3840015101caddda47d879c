@@ -1,0 +1,9 @@
+package creador;
+
+public class Creador {
+
+	public Creador() {
+		// TODO Auto-generated constructor stub
+	}
+
+}

@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">Campos de Batalla</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_detalle">Detalle Activity</string>
+</resources>

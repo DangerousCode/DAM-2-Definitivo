@@ -1,0 +1,13 @@
+package ejercicioSerializacionObjCompuestos;
+import java.io.*;
+public class Proyecto implements Serializable{
+	String nombre;
+	Empleados jefeproyecto;
+	Lenguaje lenguaje;
+	
+	Proyecto(String nombre, Empleados jefeproyecto, Lenguaje lenguaje){
+		this.jefeproyecto=jefeproyecto;
+		this.lenguaje=lenguaje;
+		this.nombre=nombre;
+	}
+}

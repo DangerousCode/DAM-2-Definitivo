@@ -1,0 +1,119 @@
+package ejercicios;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+
+import org.jdom2.*;
+import org.jdom2.output.*;
+public class Ejercicio1 {
+
+	public static void main(String[] args) {
+		
+		Element root=new Element("tebeos");
+		//Personajes
+		Element personajes=new Element("personajes");
+		Element personaje=new Element("personaje");
+		//Autores
+		Element autores=new Element("autores");
+		Element dibujantes=new Element("dibujantes");
+		Element dibujante=new Element("dibujante");
+		Element nombredib=new Element("nombredibujante");
+		Element apodo=new Element("apodo");
+		Element nacimientodib=new Element("nacimientoFecha");
+		Element nacimientopaisdib=new Element("nacimientoPais");
+		Element fallecimientodib=new Element("fallecimientoFecha");
+		//Guionistas
+		Element guionistas=new Element("guionistas");
+		Element guionista=new Element("guionista");
+		Element nombregui=new Element("nombre");
+		Element nacimientogui=new Element("nacimientoFecha");
+		Element nacimientopaisgui=new Element("nacimientoPais");
+		Element fallecimientogui=new Element("fallecimientoFecha");
+		
+		//Añadimos a personajes todas las etiquetas
+		
+		personaje.setAttribute("id","P001");
+		personaje.setAttribute("especie", "humano");
+		personaje.setText("Asterix");
+		personajes.addContent(personaje);
+		
+		personaje.setAttribute("id","P002");
+		personaje.setAttribute("especie", "animal");
+		personaje.setText("Idefix");
+		personajes.addContent(personaje);
+		
+		personaje.setAttribute("id","P003");
+		personaje.setAttribute("especie", "humano");
+		personaje.setText("Lucky luke");
+		personajes.addContent(personaje);
+		
+		personaje.setAttribute("id","P004");
+		personaje.setAttribute("especie", "animal");
+		personaje.setText("Spiderman");
+		personajes.addContent(personaje);
+		
+		//Añadimos a autores todas las etiquetas(en orden ascendente)
+		
+		nombredib.setText("Albert Uderzo");
+		nacimientodib.setText("1927");
+		nacimientopaisdib.setText("Francia");
+		
+		dibujante.setAttribute("id","D001");
+		dibujante.addContent(nombredib);
+		dibujante.addContent(nacimientodib);
+		dibujante.addContent(nacimientopaisdib);
+		
+		dibujantes.addContent(dibujante);
+		
+		nombredib.setText("Maurice de Bevere");
+		apodo.setText("Morris");
+		nacimientodib.setText("1927");
+		nacimientopaisdib.setText("Francia");
+		fallecimientodib.setText("2001");
+		
+		dibujante.setAttribute("id","D002");
+		dibujante.addContent(nombredib);
+		dibujante.addContent(apodo);
+		dibujante.addContent(nacimientodib);
+		dibujante.addContent(nacimientopaisdib);
+		dibujante.addContent(fallecimientodib);
+		
+		dibujantes.addContent(dibujante);
+		
+		autores.addContent(dibujantes);
+		
+		//Añadimos a guionistas todas las etiquetas
+		
+		nombregui.setText("Rene Goscinny");
+		nacimientogui.setText("1996");
+		nacimientopaisgui.setText("Francia");
+		fallecimientogui.setText("1997");
+		
+		guionista.setAttribute("id","1977");
+		guionista.addContent(nombregui);
+		guionista.addContent(nacimientogui);
+		guionista.addContent(nacimientopaisgui);
+		guionista.addContent(fallecimientogui);
+		
+		guionistas.addContent(guionista);
+		
+		//Añadimos las etiquetas creadas a autores y a tebeos
+		
+		root.addContent(personajes);
+		root.addContent(autores);
+		root.addContent(guionistas);
+		
+		Document doc=new Document(root);
+		try {
+			new XMLOutputter().output(doc, new FileOutputStream("PracticaXML.xml"));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
+		
+
+	}
+
+}

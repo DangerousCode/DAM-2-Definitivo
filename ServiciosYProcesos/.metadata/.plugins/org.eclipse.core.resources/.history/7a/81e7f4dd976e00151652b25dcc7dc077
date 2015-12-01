@@ -1,0 +1,8 @@
+package hilos;
+
+public class Suma {
+	int suma=0;
+	Suma(){
+		
+	}
+}

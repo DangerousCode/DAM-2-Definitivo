@@ -1,0 +1,18 @@
+package calculos;
+
+public class Hilo extends Thread{
+	int sumanum=0;
+	int veces=0;
+	int parametro=0;
+	String nombre;
+	Ventanas ventana=new Ventanas(nombre);
+	Hilo(){
+		
+	}
+	Hilo(int veces, int parametro, String nombre){
+
+	}
+	public void run(){
+
+	}
+}

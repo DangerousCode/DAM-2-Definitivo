@@ -1,0 +1,14 @@
+package calculos;
+
+public class Suma {
+	int sumacomp=0;
+	public Suma(){
+		
+	}
+	public void setSumacomp(int sumacomp){
+		this.sumacomp=sumacomp;
+	}
+	public int getSumacomp(){
+		return sumacomp;
+	}
+}

@@ -1,0 +1,14 @@
+package calculos;
+
+public class Compara {
+	int mayor=0;
+	int mayorcuatro=0;
+	int menorcuatro=0;
+	Compara(int mayorcuatro, int menorcuatro){
+		this.mayorcuatro=mayorcuatro;
+		this.menorcuatro=menorcuatro;
+	}
+	public void setMayor(int mayor){
+		this.mayor=mayor;
+	}
+}

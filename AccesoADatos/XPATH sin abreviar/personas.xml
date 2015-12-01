@@ -1,0 +1,17 @@
+<personas>
+    <persona>
+        <nombre>pepe</nombre>
+        <edad>30</edad>
+        <sexo>H</sexo>
+    </persona>
+    <persona>
+        <nombre>maria</nombre>
+        <edad>15</edad>
+        <sexo>M</sexo>
+    </persona>
+    <persona>
+        <nombre>juan</nombre>
+        <edad>35</edad>
+        <sexo>H</sexo>
+    </persona>    
+</personas>

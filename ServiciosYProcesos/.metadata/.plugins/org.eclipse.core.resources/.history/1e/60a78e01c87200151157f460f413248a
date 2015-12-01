@@ -1,0 +1,15 @@
+package calculos;
+
+public class Hilo extends Thread{
+	int array[];
+	Compara compara;
+	Hilo(){
+		
+	}
+	Hilo(int array[], Compara compara){
+		this.array=array;
+	}
+	public void run(){
+
+	}
+}

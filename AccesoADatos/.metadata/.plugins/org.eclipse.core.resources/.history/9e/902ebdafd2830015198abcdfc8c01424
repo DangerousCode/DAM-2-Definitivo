@@ -1,0 +1,32 @@
+package ejercicio3;
+
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.input.SAXBuilder;
+import org.jdom2.output.XMLOutputter;
+
+import java.util.*;
+
+public class Ejercicio3 {
+	public static void main(String args[]){
+		try{
+			SAXBuilder builder=new SAXBuilder();
+			Document doc=builder.build("Ejercicio3.xml");
+			Element root=doc.getRootElement();
+			
+			/*Añadir un atributo a autor de tipo cat1 que sea siglo=XXI*/
+			List<Element> elementos=root.getChildren();
+			Iterator it=elementos.iterator();
+			while(it.hasNext()){
+				Element cat=(Element)it.next();
+				if(cat.getAttributeValue("tipo").equals("cat1")){
+					cat.setAttribute("siglo","XXI");
+				}
+			}
+			new XMLOutputter().output(doc,System.out);
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}

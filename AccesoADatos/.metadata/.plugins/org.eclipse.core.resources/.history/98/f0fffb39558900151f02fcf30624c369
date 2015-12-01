@@ -1,0 +1,10 @@
+package ejemplo;
+
+import herramientas.Herramientas;
+
+public class Ejemplo {
+	public static void main(String args[]){
+		Herramientas.consultasXPATH("EjemploXpath.xml", "/cole/asig/nombre");
+		Herramientas.consultasXPATH("EjemploXpath.xml", "//asig/nombre");
+	}
+}

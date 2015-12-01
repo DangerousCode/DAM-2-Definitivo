@@ -1,0 +1,28 @@
+import java.io.*;
+public class Procesos {
+
+	public static void main(String[] args) throws IOException{
+		
+		String linea;
+		Process p=Runtime.getRuntime().exec("C:\\Users\\Alvaro\\Desktop\\practica.bat");
+		BufferedReader br=new BufferedReader(new InputStreamReader(p.getInputStream()));
+		while((linea=br.readLine())!=null){
+			System.out.println(linea);
+		}
+		
+		File[] fOut=new File[5];
+		ProcessBuilder[] pb=new ProcessBuilder[5];
+		
+		for(int i=0;i<5;i++){
+			fOut[i]=new File("C:\\Users\\Alvaro\\Desktop\\salidaUsuario"+(i+1)+".txt");
+			pb[i]=new ProcessBuilder("CMD","dir","C:/Users/Alvaro/Desktop/Usuario"+(i+1));
+			pb[i].redirectOutput(fOut[i]);
+		}
+		
+		for(int i=0;i<5;i++){
+			pb[i].start();
+		}
+
+	}
+}
+	

@@ -1,0 +1,26 @@
+package ejercicio2;
+
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.input.SAXBuilder;
+
+public class Ejercicio2 {
+
+	public static void main(String[] args) {
+		try{
+			SAXBuilder builder=new SAXBuilder();
+			Document doc=builder.build("Ejercicio2.xml");
+			Element root=doc.getRootElement();
+			Element mueble=new Element("mueble");
+			Element persianas=new Element("persianas");
+			
+			mueble.setText("muebles baratos");
+			persianas.setText("De colores");
+			
+			
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+
+}

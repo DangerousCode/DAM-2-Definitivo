@@ -1,0 +1,13 @@
+package ejercicioSerializacionObjCompuestos;
+
+public class Proyecto {
+	String nombre;
+	Empleados jefeproyecto;
+	Lenguaje lenguaje;
+	
+	Proyecto(String nombre, Empleados jefeproyecto, Lenguaje lenguaje){
+		this.jefeproyecto=jefeproyecto;
+		this.lenguaje=lenguaje;
+		this.nombre=nombre;
+	}
+}

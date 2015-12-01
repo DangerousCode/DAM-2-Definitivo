@@ -1,0 +1,17 @@
+import java.io.*;
+public class Procesos {
+
+	public static void main(String[] args) throws IOException{
+		
+		String linea;
+		Process p=Runtime.getRuntime().exec("C:\\Users\\Alvaro\\Desktop\\practica.bat");
+		BufferedReader br=new BufferedReader(new InputStreamReader(p.getInputStream()));
+		while((linea=br.readLine())!=null){
+			System.out.println(linea);
+		}
+		File fichero=new File("C\\Users\\Alvaro\\Desktop\\salidaUsuario.txt");
+
+
+	}
+}
+	

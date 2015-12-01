@@ -1,0 +1,29 @@
+package calculos;
+
+public class Calculos {
+	public static void main(String[] args) throws InterruptedException{
+		int parametro=7;
+		int hilos=20;
+		int numero=0;
+		//Mientras los hilos sean mayores que
+		//uno el bucle se mantendra
+		while(hilos>1){
+			//Si el modulo del parametro y los hilos
+			//es 0, se habra obtenido la cantidad mas eficiente
+			//de hilos para realizar el calculo
+			if(parametro%hilos==0){
+				numero=parametro/hilos;
+				break;
+			}
+			hilos--;
+		}
+		
+		if(hilos==1){
+			Hilo hilo=new Hilo(numero);
+			hilo.start();
+			hilo.join();
+		}
+		
+		
+	}
+}

@@ -1,0 +1,20 @@
+package operaciones;
+
+import org.jdom2.input.SAXBuilder;
+import org.jdom2.output.XMLOutputter;
+import org.jdom2.contrib.dom.*;
+import org.jdom2.*;
+
+public class ModificarDato {
+	public static void main(String[] args){
+		try{
+			SAXBuilder sx=new SAXBuilder();
+			Document doc=sx.build("Operaciones.xml");
+			new XMLOutputter().output(doc, System.out);
+			Element root=doc.getRootElement();
+			root.getChild("nivel").setAttribute("precio", "2300");
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}

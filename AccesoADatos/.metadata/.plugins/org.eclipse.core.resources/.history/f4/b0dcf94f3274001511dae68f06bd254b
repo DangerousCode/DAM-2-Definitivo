@@ -1,0 +1,25 @@
+package ejercicio2;
+import java.io.*;
+import java.util.*;
+public class Ejercicio2 {
+	public static void main(String[] args){
+		try{
+			BufferedWriter bw=new BufferedWriter(new FileWriter("hola.txt"));
+			BufferedReader sc=new BufferedReader(new InputStreamReader(System.in));
+			BufferedReader br=new BufferedReader(new FileReader("hola.txt"));
+			
+			String cadena=sc.readLine();
+			
+			bw.write(cadena);
+			
+			bw.close();
+			String linea=br.readLine();
+			StringTokenizer tokenizer=new StringTokenizer(linea," ");
+			while(tokenizer.hasMoreTokens()){
+				System.out.print(tokenizer.nextToken());
+			}
+		}catch(IOException e){
+			System.out.println("Excepcion io");
+		}
+	}
+}

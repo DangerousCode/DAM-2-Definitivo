@@ -1,0 +1,11 @@
+package robots;
+
+public class Paquete {
+	int numero;
+	int direccion;
+	public Paquete(int numero,int direccion) {
+		this.numero=numero;
+		this.direccion=direccion;
+	}
+
+}

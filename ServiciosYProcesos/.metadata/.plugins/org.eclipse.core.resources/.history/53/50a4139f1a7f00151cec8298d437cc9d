@@ -1,0 +1,20 @@
+package tg;
+import java.util.concurrent.*;
+public class Madre extends Thread {
+	Semaphore semaforomadre;
+	Semaphore semaforoninios;
+	Madre(Semaphore semaforomadre, Semaphore semaforoninios){
+		this.semaforomadre=semaforomadre;
+		this.semaforoninios=semaforoninios;
+	}
+	public void run(){
+		try{
+			Creador.galletas=10;
+			System.out.println("He rellenado el frasco");
+			semaforoninios.release();
+			semaforomadre.acquire();
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}

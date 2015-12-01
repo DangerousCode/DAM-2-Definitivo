@@ -1,0 +1,43 @@
+import org.jdom2.Document;
+import org.jdom2.input.SAXBuilder;
+
+import org.jdom2.*;
+import java.util.*;
+
+public class LeerEjemplo3 {
+	public static void main(String[] args){
+		try{
+			SAXBuilder builder=new SAXBuilder();
+			Document doc=builder.build("xml.xml");
+			Element root=doc.getRootElement();
+			System.out.println(root.getAttribute("tipo"));
+			
+			List equipos=root.getChildren("equipo");
+			Iterator it=equipos.iterator();
+			while(it.hasNext()){
+				Element e=(Element)it.next();
+				Element club=e.getChild("club");
+				Element presidente=e.getChild("presidente");
+				List plantilla=e.getChildren("plantilla");
+				Iterator it2=plantilla.iterator();
+				while(it2.hasNext()){
+					Element p=(Element)it2.next();
+					List nombre=p.getChildren("nombre");
+					Iterator it3=nombre.iterator();
+					while(it3.hasNext()){
+						Element n=(Element) it3.next();
+						System.out.print(n);
+						System.out.print(n.getText()+"\n");
+					}
+				}
+				System.out.print(club);
+				System.out.print(club.getText()+"\n");
+				System.out.print(presidente);
+				System.out.print(presidente.getText()+"\n");
+				System.out.print(plantilla);
+			}
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}

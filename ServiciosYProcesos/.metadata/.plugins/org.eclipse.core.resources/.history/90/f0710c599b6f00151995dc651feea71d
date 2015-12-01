@@ -1,0 +1,42 @@
+package calculos;
+
+public class Calculos {
+
+	public static void main(String[] args) throws InterruptedException{
+		int hilos=20;
+		int numeros=0;
+		int arg=70;
+		while(hilos>0){
+			if(arg%hilos==0){
+				numeros=arg/hilos;
+				break;
+			}
+			hilos--;
+		}
+		
+		Suma suma=new Suma();
+		if(hilos>1){
+			Hilo[] hilo=new Hilo[hilos];
+			for(int j=0;j<hilo.length;j++){
+				hilo[j]=new Hilo(numeros, suma);
+			}
+			for(int k=0;k<hilo.length;k++){
+				hilo[k].start();
+				hilo[k].sleep(0);
+			}
+			for(int k=0;k<hilo.length;k++){
+			}
+			for(int m=0;m<hilo.length;m++){
+				hilo[m].join();
+			}
+		}
+		else{
+			Hilo hilo=new Hilo(arg,suma);
+			hilo.start();
+			hilo.join();
+		}
+		System.out.println("El resultado es: "+suma.getSumacomp());
+		
+	}
+
+}

@@ -1,0 +1,17 @@
+<ficha>
+	<autor tipo="cat1">
+		<nombre>Gabriel</nombre>
+		<apellido>Molina</apellido>
+		<direccion>Alfredo Vargas num 36</direccion>
+	</autor>
+	<autor tipo="cat2">
+		<nombre>Gabriel</nombre>
+		<apellido>Marquez</apellido>
+		<direccion>calle pez num 3</direccion>
+	</autor>
+	<autor tipo="cat1">
+		<nombre>Arturo</nombre>
+		<apellido>Perez Reverte</apellido>
+		<direccion>Paseo retiro num4</direccion>
+	</autor>
+</ficha>

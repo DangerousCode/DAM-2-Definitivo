@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<<<<<<< HEAD
+<listEntry value="/Ejemplo seguir en clase XPATH/src/ejercicios/Ejercicio3.java"/>
+=======
+<listEntry value="/PracticaCompletaXML/src/ejercicios/Ejercicio3.java"/>
+>>>>>>> origin/master
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="ejercicios.Ejercicio3"/>
+<<<<<<< HEAD
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="Ejemplo seguir en clase XPATH"/>
+=======
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="PracticaCompletaXML"/>
+>>>>>>> origin/master
+</launchConfiguration>

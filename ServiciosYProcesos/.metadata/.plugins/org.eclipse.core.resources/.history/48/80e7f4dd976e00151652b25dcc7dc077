@@ -1,0 +1,17 @@
+package hilos;
+
+public class Hilo extends Thread{
+	int numeros=0;
+	int sumatotal=0;
+	Hilo(){
+		
+	}
+	public Hilo(int numeros){
+		this.numeros=numeros;
+	}
+	public void run(){
+		for (int i=1;i<numeros;i++){
+			sumatotal+=i;
+		}
+	}
+}

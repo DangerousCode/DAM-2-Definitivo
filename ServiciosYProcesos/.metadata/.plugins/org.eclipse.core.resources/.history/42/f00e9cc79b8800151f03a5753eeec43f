@@ -1,0 +1,27 @@
+package creador;
+import java.util.concurrent.*;
+public class Paquete {
+	char direccion;
+	int peso;
+	Semaphore sempaq;
+	Paquete(){
+		
+	}
+	Paquete(char direccion,int peso,Semaphore sempaq){
+		this.sempaq=sempaq;
+		this.direccion=direccion;
+		this.peso=peso;
+	}
+	public char getDireccion() {
+		return direccion;
+	}
+	public void setDireccion(char direccion) {
+		this.direccion = direccion;
+	}
+	public float getPeso() {
+		return peso;
+	}
+	public void setPeso(int peso) {
+		this.peso = peso;
+	}
+}

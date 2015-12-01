@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.jdt.launching.localJavaApplication">
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_PATHS">
+<listEntry value="/EjemploInterfazSWING(Copiado de apuntes)/src/interfaz/Abb.java"/>
+</listAttribute>
+<listAttribute key="org.eclipse.debug.core.MAPPED_RESOURCE_TYPES">
+<listEntry value="1"/>
+</listAttribute>
+<stringAttribute key="org.eclipse.jdt.launching.MAIN_TYPE" value="interfaz.Abb"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROJECT_ATTR" value="EjemploInterfazSWING(Copiado de apuntes)"/>
+</launchConfiguration>

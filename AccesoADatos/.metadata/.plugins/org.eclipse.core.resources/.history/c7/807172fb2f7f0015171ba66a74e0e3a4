@@ -1,0 +1,22 @@
+package operacionesbasicasXML;
+
+import java.util.Iterator;
+import java.util.List;
+
+import org.jdom2.Document;
+import org.jdom2.Element;
+import org.jdom2.input.SAXBuilder;
+
+public class ModificarAtributoLista {
+	public static void main(String[] args){
+		try{
+			SAXBuilder sx=new SAXBuilder();
+			Document doc=sx.build("Ejercicio2.xml");
+			Element root=doc.getRootElement();
+			List<Element> elementos=root.getChildren("tipo");
+			elementos.get(0).getChild("historieta").getAttribute("nombre").setName("historieta");
+		}catch(Exception e){
+			e.printStackTrace();
+		}
+	}
+}

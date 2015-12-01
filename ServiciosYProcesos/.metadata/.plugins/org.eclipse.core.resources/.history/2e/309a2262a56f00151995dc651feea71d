@@ -1,0 +1,21 @@
+package calculos;
+
+public class Hilo extends Thread{
+	int sumanum=0;
+	int numero=0;
+	Suma sumatotal;
+	Hilo(){
+		
+	}
+	Hilo(int numero, Suma sumatotal){
+		this.numero=numero;
+		this.sumatotal=sumatotal;
+	}
+	public void run(){
+		for(int i=numero;i>0;i--){
+			sumanum=sumanum+i;
+		}
+		System.out.println("La suma del hilo es: "+sumanum);
+		sumatotal.sumarNumerosHilos(sumanum);
+	}
+}
