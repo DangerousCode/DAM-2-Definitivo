@@ -1,29 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.alumnot.xml_interno_lista"
-    android:versionCode="1"
-    android:versionName="1.0">
+    android:versionName="1.0"
+    android:versionCode="1">
 
     <uses-sdk
         android:minSdkVersion="15"
         android:targetSdkVersion="17"/>
-
     <application
         android:allowBackup="true"
-        android:label="Personajes LoL"
-        android:icon="@mipmap/icon"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme">
+        android:theme="@style/AppTheme" >
         <activity
-            android:name="com.example.alumnot.xml_interno_lista.MainActivity"
-            android:label="Personajes LoL">
+            android:name=""
+            android:label="@string/app_name">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN"/>
-                <category android:name="android.intent.category.LAUNCHER"/>
+                <action android:name="" />
+
+                <category android:name="" />
             </intent-filter>
         </activity>
-        <activity android:name=".DetalleActivity"
-            android:label="@string/title_activity_detalle"></activity>
-
     </application>
 
 </manifest>
