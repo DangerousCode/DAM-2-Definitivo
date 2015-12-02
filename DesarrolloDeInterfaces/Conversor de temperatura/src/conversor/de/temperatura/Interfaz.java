@@ -54,8 +54,16 @@ public class Interfaz extends javax.swing.JFrame {
         setTitle("Conversor de temperatura");
         setBackground(new java.awt.Color(102, 51, 255));
 
+        campoTexto.setBackground(new java.awt.Color(0, 0, 0));
+        campoTexto.setFont(new java.awt.Font("Comic Sans MS", 1, 36)); // NOI18N
+        campoTexto.setForeground(new java.awt.Color(255, 102, 0));
         campoTexto.setHorizontalAlignment(javax.swing.JTextField.CENTER);
         campoTexto.setToolTipText("Introduzca la temperatura");
+        campoTexto.addCaretListener(new javax.swing.event.CaretListener() {
+            public void caretUpdate(javax.swing.event.CaretEvent evt) {
+                campoTextoCaretUpdate(evt);
+            }
+        });
 
         buttonGroup1.add(rbCelsius);
         rbCelsius.setText("ºC");
@@ -111,6 +119,7 @@ public class Interfaz extends javax.swing.JFrame {
         lKelvin.setEditable(false);
         lKelvin.setHorizontalAlignment(javax.swing.JTextField.CENTER);
 
+        lGrados.setFont(new java.awt.Font("Comic Sans MS", 0, 36)); // NOI18N
         lGrados.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -119,6 +128,11 @@ public class Interfaz extends javax.swing.JFrame {
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addComponent(campoTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 206, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(lGrados, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(layout.createSequentialGroup()
                         .addGap(68, 68, 68)
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
@@ -136,27 +150,22 @@ public class Interfaz extends javax.swing.JFrame {
                                 .addComponent(cbKelvin))
                             .addComponent(lCelsius)
                             .addComponent(lKelvin)
-                            .addComponent(lFarenheit)))
-                    .addGroup(layout.createSequentialGroup()
-                        .addGap(81, 81, 81)
-                        .addComponent(campoTexto, javax.swing.GroupLayout.PREFERRED_SIZE, 116, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(lGrados, javax.swing.GroupLayout.PREFERRED_SIZE, 34, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(49, Short.MAX_VALUE))
+                            .addComponent(lFarenheit))))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
-                .addGap(66, 66, 66)
+                .addGap(56, 56, 56)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(campoTexto, javax.swing.GroupLayout.DEFAULT_SIZE, 33, Short.MAX_VALUE)
-                    .addComponent(lGrados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addGap(18, 18, 18)
+                    .addComponent(lGrados, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(campoTexto, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(10, 10, 10)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(rbCelsius)
                     .addComponent(rbFarenheit)
                     .addComponent(rbKelvin))
-                .addGap(56, 56, 56)
+                .addGap(94, 94, 94)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(cbCelsius)
                     .addComponent(cbFarenheit)
@@ -167,7 +176,7 @@ public class Interfaz extends javax.swing.JFrame {
                 .addComponent(lFarenheit, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(lKelvin, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(50, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
         pack();
@@ -271,6 +280,10 @@ public class Interfaz extends javax.swing.JFrame {
             lKelvin.setText("");
         }
     }//GEN-LAST:event_cbKelvinActionPerformed
+
+    private void campoTextoCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_campoTextoCaretUpdate
+        if()
+    }//GEN-LAST:event_campoTextoCaretUpdate
 
     /**
      * @param args the command line arguments
