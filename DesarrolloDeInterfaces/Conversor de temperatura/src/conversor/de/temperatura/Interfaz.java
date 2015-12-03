@@ -14,7 +14,7 @@ import java.text.DecimalFormat;
 public class Interfaz extends javax.swing.JFrame {
 
     private double conversion;
-    private DecimalFormat decimal=new DecimalFormat("0.0");
+    private DecimalFormat decimal = new DecimalFormat("0.0");
 
     /**
      * Creates new form Interfaz
@@ -189,12 +189,6 @@ public class Interfaz extends javax.swing.JFrame {
         lCelsius.setText(" ");
         cbKelvin.setSelected(false);
         lKelvin.setText(" ");
-        cbFarenheit.setVisible(false);
-        lFarenheit.setVisible(false);
-        lCelsius.setVisible(rootPaneCheckingEnabled);
-        lKelvin.setVisible(rootPaneCheckingEnabled);
-        cbCelsius.setVisible(rootPaneCheckingEnabled);
-        cbKelvin.setVisible(rootPaneCheckingEnabled);
         lGrados.setText("ºF");
     }//GEN-LAST:event_rbFarenheitActionPerformed
 
@@ -205,12 +199,6 @@ public class Interfaz extends javax.swing.JFrame {
         lCelsius.setText(" ");
         cbKelvin.setSelected(false);
         lKelvin.setText(" ");
-        cbFarenheit.setVisible(rootPaneCheckingEnabled);
-        cbCelsius.setVisible(false);
-        lFarenheit.setVisible(rootPaneCheckingEnabled);
-        lCelsius.setVisible(false);
-        lKelvin.setVisible(rootPaneCheckingEnabled);
-        cbKelvin.setVisible(rootPaneCheckingEnabled);
         lGrados.setText("ºC");
     }//GEN-LAST:event_rbCelsiusActionPerformed
 
@@ -221,68 +209,80 @@ public class Interfaz extends javax.swing.JFrame {
         lCelsius.setText(" ");
         cbKelvin.setSelected(false);
         lKelvin.setText(" ");
-        cbFarenheit.setVisible(rootPaneCheckingEnabled);
-        cbCelsius.setVisible(rootPaneCheckingEnabled);
-        cbKelvin.setVisible(false);
-        lFarenheit.setVisible(rootPaneCheckingEnabled);
-        lCelsius.setVisible(rootPaneCheckingEnabled);
-        lKelvin.setVisible(false);
         lGrados.setText("ºK");
     }//GEN-LAST:event_rbKelvinActionPerformed
 
     private void cbCelsiusActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbCelsiusActionPerformed
-        if (rbCelsius.isSelected()){
+        if (rbCelsius.isSelected()) {
             lCelsius.setText(campoTexto.getText());
         }
         if (rbFarenheit.isSelected()) {
             conversion = (Double.parseDouble(campoTexto.getText()) - 32) / 1.8;
-            lCelsius.setText(""+decimal.format(conversion));
+            lCelsius.setText("" + decimal.format(conversion));
         }
         if (rbKelvin.isSelected()) {
             conversion = Double.parseDouble(campoTexto.getText()) - 273.15;
-            lCelsius.setText(""+decimal.format(conversion));
+            lCelsius.setText("" + decimal.format(conversion));
         }
-        if (cbCelsius.isSelected()==false){
+        if (cbCelsius.isSelected() == false) {
             lCelsius.setText("");
         }
     }//GEN-LAST:event_cbCelsiusActionPerformed
 
     private void cbFarenheitActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbFarenheitActionPerformed
-        if (rbCelsius.isSelected()){
-            conversion=(Double.parseDouble(campoTexto.getText())*1.8)+32;
-            lFarenheit.setText(""+decimal.format(conversion));
+        if (rbCelsius.isSelected()) {
+            conversion = (Double.parseDouble(campoTexto.getText()) * 1.8) + 32;
+            lFarenheit.setText("" + decimal.format(conversion));
         }
         if (rbFarenheit.isSelected()) {
             lFarenheit.setText(campoTexto.getText());
         }
         if (rbKelvin.isSelected()) {
-            conversion = ((Double.parseDouble(campoTexto.getText()) - 273.15) *1.8 )+32;
-            lFarenheit.setText(""+decimal.format(conversion));
+            conversion = ((Double.parseDouble(campoTexto.getText()) - 273.15) * 1.8) + 32;
+            lFarenheit.setText("" + decimal.format(conversion));
         }
-        if (cbFarenheit.isSelected()==false){
+        if (cbFarenheit.isSelected() == false) {
             lFarenheit.setText("");
         }
     }//GEN-LAST:event_cbFarenheitActionPerformed
 
     private void cbKelvinActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbKelvinActionPerformed
-        if (rbCelsius.isSelected()){
+        if (rbCelsius.isSelected()) {
             conversion = Double.parseDouble(campoTexto.getText()) + 273.15;
-            lKelvin.setText(""+decimal.format(conversion));
+            lKelvin.setText("" + decimal.format(conversion));
         }
         if (rbFarenheit.isSelected()) {
-            conversion = ((Double.parseDouble(campoTexto.getText()) - 32) / 1.8)+273.15;;
-            lKelvin.setText(""+decimal.format(conversion));
+            conversion = ((Double.parseDouble(campoTexto.getText()) - 32) / 1.8) + 273.15;;
+            lKelvin.setText("" + decimal.format(conversion));
         }
         if (rbKelvin.isSelected()) {
             lKelvin.setText(campoTexto.getText());
         }
-        if (cbKelvin.isSelected()==false){
+        if (cbKelvin.isSelected() == false) {
             lKelvin.setText("");
         }
     }//GEN-LAST:event_cbKelvinActionPerformed
 
     private void campoTextoCaretUpdate(javax.swing.event.CaretEvent evt) {//GEN-FIRST:event_campoTextoCaretUpdate
-        if()
+        if (!campoTexto.getText().isEmpty()) {
+            if (cbKelvin.isSelected()) {
+                cbKelvin.doClick();
+                cbKelvin.doClick();
+            }
+            if (cbCelsius.isSelected()) {
+                cbCelsius.doClick();
+                cbCelsius.doClick();
+            }
+            if (cbFarenheit.isSelected()) {
+                cbFarenheit.doClick();
+                cbFarenheit.doClick();
+            }
+        }
+        else{
+            lCelsius.setText("");
+            lFarenheit.setText("");
+            lKelvin.setText("");
+        }
     }//GEN-LAST:event_campoTextoCaretUpdate
 
     /**
@@ -294,7 +294,7 @@ public class Interfaz extends javax.swing.JFrame {
         /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
          * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
          */
-       
+
         //</editor-fold>
 
         /* Create and display the form */

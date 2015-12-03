@@ -8,39 +8,20 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     tools:context=".DetalleActivity"
-    android:background="#23425b">
+    android:background="@drawable/fondodef">
 
-<<<<<<< HEAD
     <ExpandableListView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/expandableListView"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true" />
-=======
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/campoNombre"
-        android:textColor="#ffffff"
-        android:background="#020722"
-        android:gravity="center" />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:id="@+id/campoRol"
-        android:gravity="center_horizontal"
-        android:textSize="30sp"
-        android:textColor="#FFFFFF"
-        android:background="#000520"
-        android:layout_marginTop="16dp" />
 
     <ScrollView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/scrollView"
-        android:layout_marginTop="56dp">
+        android:layout_marginTop="0dp">
 
         <RelativeLayout
             android:orientation="vertical"
@@ -52,7 +33,8 @@
                 android:layout_height="wrap_content"
                 android:id="@+id/campoImagen"
                 android:maxHeight="200dp"
-                android:adjustViewBounds="true" />
+                android:adjustViewBounds="true"
+                android:layout_marginTop="66dp" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -63,11 +45,28 @@
                 android:layout_alignParentLeft="true"
                 android:layout_marginLeft="0dp"
                 android:layout_alignParentTop="true"
-                android:layout_marginTop="210dp"
+                android:layout_marginTop="266dp"
                 android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/campoNombre"
+                android:textColor="#ffffff"
+                android:background="#020722"
+                android:gravity="center" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/campoRol"
+                android:gravity="center_horizontal"
+                android:textSize="30sp"
+                android:textColor="#FFFFFF"
+                android:background="#000520"
+                android:layout_marginTop="16dp" />
 
         </RelativeLayout>
     </ScrollView>
 
->>>>>>> origin/master
 </RelativeLayout>
