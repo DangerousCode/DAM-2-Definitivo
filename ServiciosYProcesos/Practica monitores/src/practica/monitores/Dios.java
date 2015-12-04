@@ -6,6 +6,8 @@
 package practica.monitores;
 
 import java.util.Random;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -14,9 +16,10 @@ import java.util.Random;
 public class Dios extends Thread {
 
     Persona cola[];
-
-    Dios(Persona cola[]) {
+    Syncro sync;
+    Dios(Persona cola[], Syncro sync) {
         this.cola = cola;
+        this.sync=sync;
     }
 
     @Override
@@ -28,41 +31,19 @@ public class Dios extends Thread {
           Random rand = new Random();
           switch (rand.nextInt(3)) {
                     case 0:
-                        cola[i] = new Persona(personas, "Champu");
+                        cola[i] = new Persona(personas, "Champu",sync);
                         break;
                     case 1:
-                        cola[i] = new Persona(personas, "Televisor");
+                        cola[i] = new Persona(personas, "Televisor", sync);
                         break;
                     case 2:
-                        cola[i] = new Persona(personas, "Consola");
+                        cola[i] = new Persona(personas, "Consola", sync);
                         break;
                 }
           personas++;
         }
-        while (!finaljornada) {
-            //cola[0] sera null si la persona ha pasado por caja.
-            if (cola[0] == null) {
-                for (int i = cola.length - 1; i >= 0; i++) {
-                    if(i==0){
-                        break;
-                    }
-                    cola[i - 1] = cola[i];
-                }
-
-                cola[cola.length - 1] = null;
-
-                Random rand = new Random();
-
-                switch (rand.nextInt(3)) {
-                    case 0:
-                        cola[cola.length - 1] = new Persona(personas, "Champu");
-                    case 1:
-                        cola[cola.length - 1] = new Persona(personas, "Televisor");
-                    case 2:
-                        cola[cola.length - 1] = new Persona(personas, "Consola");
-                }
-            }
-            personas++;
+        for (int i=0;i<cola.length;i++){
+            cola[i].start();
         }
     }
 }

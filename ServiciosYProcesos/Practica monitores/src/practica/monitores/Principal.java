@@ -17,17 +17,18 @@ public class Principal {
     /**
      * @param args the command line arguments
      */
-    public static Persona cola[] = new Persona[9];
+    public static Syncro sync=new Syncro();
+    public static Persona cola[] = new Persona[80];
 
     public static void main(String[] args) {
 
         try {
-            Dios dios = new Dios(cola);
+            Dios dios = new Dios(cola, sync);
             dios.start();
-            Thread.sleep(2000);
+            Thread.sleep(4000);
             Cajera cajera[] = new Cajera[3];
             for (int i = 0; i < cajera.length; i++) {
-                cajera[i] = new Cajera(i + 1, cola);
+                cajera[i] = new Cajera(i + 1, cola, sync);
                 cajera[i].start();
             }
             //Join de los hilos

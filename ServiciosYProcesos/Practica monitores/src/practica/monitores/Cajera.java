@@ -13,25 +13,37 @@ import java.util.logging.Logger;
  * @author AlumnoT
  */
 public class Cajera extends Thread {
+
     int id;
     Persona cola[];
-    Cajera(int id, Persona cola[]) {
+    boolean esperar = false;
+    Syncro sync;
+
+    Cajera(int id, Persona cola[], Syncro sync) {
         this.id = id;
-        this.cola=cola;
+        this.cola = cola;
+        this.sync=sync;
     }
 
     public void setId(int id) {
         this.id = id;
     }
-    
+
+    public void setEsperar(boolean esperar) {
+        this.esperar = esperar;
+    }
+
     @Override
-    public void run(){
-        boolean finjornada=false;
-        while(!finjornada){
-                System.out.println("La persona "+cola[0].getNumero()+" ha comprado un "+cola[0].getProducto()+" en la caja "+id);
-                cola[0]=null;
-                
+    public void run() {
+        int persona=0;
+        while (persona!=cola.length-1) {
+            try {
+                Thread.sleep(1000);
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Cajera.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            sync.despertar();
         }
     }
-    
+
 }
