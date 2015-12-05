@@ -5,6 +5,7 @@
  */
 package practica.monitores;
 
+import java.util.Random;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -12,16 +13,20 @@ import java.util.logging.Logger;
  *
  * @author Alvaro
  */
-class Persona extends Thread{
-    
+class Persona extends Thread {
+
     int numero;
     String producto;
     Syncro sync;
-    
-    public Persona(int numero, String producto, Syncro sync) {
+    Cajera cajera[];
+    Ventanas ventanas[];
+
+    public Persona(int numero, String producto, Syncro sync, Cajera cajera[], Ventanas ventanas[]) {
         this.numero = numero;
         this.producto = producto;
-        this.sync=sync;
+        this.sync = sync;
+        this.cajera = cajera;
+        this.ventanas=ventanas;
     }
 
     public int getNumero() {
@@ -31,16 +36,29 @@ class Persona extends Thread{
     public String getProducto() {
         return producto;
     }
-    
+
     @Override
-    public void run(){
+    public void run() {
+        int caja;
         try {
             Thread.sleep(500);
-            sync.comprar(numero, producto);
+            caja = sync.comprar(numero, producto, cajera, ventanas);
+            Random rand = new Random();
+            switch (rand.nextInt(3)) {
+                case 0:
+                    Thread.sleep(3000);
+                    cajera[caja].setOcupada(false);
+                case 1:
+                    Thread.sleep(1500);
+                    cajera[caja].setOcupada(false);
+                case 2:
+                    Thread.sleep(500);
+                    cajera[caja].setOcupada(false);
+
+            }
         } catch (InterruptedException ex) {
             Logger.getLogger(Persona.class.getName()).log(Level.SEVERE, null, ex);
-        } 
+        }
     }
-    
 
 }

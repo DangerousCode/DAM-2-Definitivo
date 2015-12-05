@@ -16,7 +16,7 @@ public class Cajera extends Thread {
 
     int id;
     Persona cola[];
-    boolean esperar = false;
+    boolean ocupada = false;
     Syncro sync;
 
     Cajera(int id, Persona cola[], Syncro sync) {
@@ -29,8 +29,8 @@ public class Cajera extends Thread {
         this.id = id;
     }
 
-    public void setEsperar(boolean esperar) {
-        this.esperar = esperar;
+    public void setOcupada(boolean esperar) {
+        this.ocupada = esperar;
     }
 
     @Override
