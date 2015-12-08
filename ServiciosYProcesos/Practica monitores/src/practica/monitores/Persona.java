@@ -17,16 +17,18 @@ class Persona extends Thread {
 
     int numero;
     String producto;
+    double precio;
     Syncro sync;
     Cajera cajera[];
     Ventanas ventanas[];
 
-    public Persona(int numero, String producto, Syncro sync, Cajera cajera[], Ventanas ventanas[]) {
+    public Persona(int numero, String producto, Syncro sync, Cajera cajera[], Ventanas ventanas[], double precio) {
         this.numero = numero;
         this.producto = producto;
         this.sync = sync;
         this.cajera = cajera;
         this.ventanas=ventanas;
+        this.precio=precio;
     }
 
     public int getNumero() {
@@ -42,7 +44,7 @@ class Persona extends Thread {
         int caja;
         try {
             Thread.sleep(500);
-            caja = sync.comprar(numero, producto, cajera, ventanas);
+            caja = sync.comprar(numero, producto, cajera, ventanas, precio);
             Random rand = new Random();
             switch (rand.nextInt(3)) {
                 case 0:
@@ -56,6 +58,7 @@ class Persona extends Thread {
                     cajera[caja].setOcupada(false);
 
             }
+            Principal.cuentapersonas++;
         } catch (InterruptedException ex) {
             Logger.getLogger(Persona.class.getName()).log(Level.SEVERE, null, ex);
         }

@@ -5,6 +5,7 @@
  */
 package practica.monitores;
 
+import java.text.DecimalFormat;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -17,12 +18,20 @@ public class Cajera extends Thread {
     int id;
     Persona cola[];
     boolean ocupada = false;
-    Syncro sync;
+    boolean finjornada = false;
 
-    Cajera(int id, Persona cola[], Syncro sync) {
+    public void setFinjornada(boolean finjornada) {
+        this.finjornada = finjornada;
+    }
+    Syncro sync;
+    double recaudacion;
+    Ventanas ventanas[];
+
+    Cajera(int id, Persona cola[], Syncro sync, Ventanas ventanas[]) {
         this.id = id;
         this.cola = cola;
-        this.sync=sync;
+        this.sync = sync;
+        this.ventanas = ventanas;
     }
 
     public void setId(int id) {
@@ -33,10 +42,15 @@ public class Cajera extends Thread {
         this.ocupada = esperar;
     }
 
+    public void sumRecaudacion(double valor) {
+        recaudacion += valor;
+    }
+
     @Override
     public void run() {
-        int persona=0;
-        while (persona!=cola.length-1) {
+        DecimalFormat dc=new DecimalFormat("0.00");
+        int persona = 0;
+        while (Principal.cuentapersonas!=Principal.LONGCOLA-1) {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException ex) {
@@ -44,6 +58,7 @@ public class Cajera extends Thread {
             }
             sync.despertar();
         }
+        ventanas[id-1].escribecadena("La recaudacion de esta caja es: " + dc.format(recaudacion) + " euros");
     }
 
 }

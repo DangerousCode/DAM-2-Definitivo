@@ -18,13 +18,15 @@ public class Principal {
     /**
      * @param args the command line arguments
      */
+    public static final int LONGCOLA=20;
+    public static int cuentapersonas=0;
     public static void main(String[] args) {
         Syncro sync = new Syncro();
-        Persona cola[] = new Persona[80];
+        Persona cola[] = new Persona[LONGCOLA];
         Cajera cajera[] = new Cajera[3];
-        Ventanas ventanas[]={new Ventanas("Cajera 1"),new Ventanas("Cajera 2"),new Ventanas("Cajera 3")};
+        Ventanas ventanas[]={new Ventanas("Caja 1"),new Ventanas("Caja 2"),new Ventanas("Caja 3")};
         for (int i = 0; i < cajera.length; i++) {
-            cajera[i] = new Cajera(i + 1, cola, sync);
+            cajera[i] = new Cajera(i + 1, cola, sync, ventanas);
             cajera[i].start();
         }
         int personas = 0;
@@ -33,13 +35,13 @@ public class Principal {
             Random rand = new Random();
             switch (rand.nextInt(3)) {
                 case 0:
-                    cola[i] = new Persona(personas, "Champu", sync, cajera, ventanas);
+                    cola[i] = new Persona(personas, "Champu", sync, cajera, ventanas, 3.50);
                     break;
                 case 1:
-                    cola[i] = new Persona(personas, "Televisor", sync, cajera, ventanas);
+                    cola[i] = new Persona(personas, "Televisor", sync, cajera, ventanas, 559.99);
                     break;
                 case 2:
-                    cola[i] = new Persona(personas, "Consola", sync, cajera, ventanas);
+                    cola[i] = new Persona(personas, "Consola", sync, cajera, ventanas, 399.99);
                     break;
             }
             personas++;
