@@ -43,7 +43,7 @@ class Persona extends Thread {
     public void run() {
         int caja;
         try {
-            Thread.sleep(500);
+            Thread.sleep(1000);
             caja = sync.comprar(numero, producto, cajera, ventanas, precio);
             Random rand = new Random();
             switch (rand.nextInt(3)) {
@@ -51,14 +51,13 @@ class Persona extends Thread {
                     Thread.sleep(3000);
                     cajera[caja].setOcupada(false);
                 case 1:
-                    Thread.sleep(1500);
+                    Thread.sleep(2000);
                     cajera[caja].setOcupada(false);
                 case 2:
-                    Thread.sleep(500);
+                    Thread.sleep(1000);
                     cajera[caja].setOcupada(false);
 
             }
-            Principal.cuentapersonas++;
         } catch (InterruptedException ex) {
             Logger.getLogger(Persona.class.getName()).log(Level.SEVERE, null, ex);
         }

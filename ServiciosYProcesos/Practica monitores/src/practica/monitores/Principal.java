@@ -18,13 +18,14 @@ public class Principal {
     /**
      * @param args the command line arguments
      */
-    public static final int LONGCOLA=20;
-    public static int cuentapersonas=0;
+    public static final int LONGCOLA = 20;
+    public static int cuentapersonas = 0;
+
     public static void main(String[] args) {
         Syncro sync = new Syncro();
         Persona cola[] = new Persona[LONGCOLA];
         Cajera cajera[] = new Cajera[3];
-        Ventanas ventanas[]={new Ventanas("Caja 1"),new Ventanas("Caja 2"),new Ventanas("Caja 3")};
+        Ventanas ventanas[] = {new Ventanas("Caja 1"), new Ventanas("Caja 2"), new Ventanas("Caja 3")};
         for (int i = 0; i < cajera.length; i++) {
             cajera[i] = new Cajera(i + 1, cola, sync, ventanas);
             cajera[i].start();
@@ -50,16 +51,17 @@ public class Principal {
             cola[i].start();
         }
         //Join de los hilos
-        for (int i = 0; i < cajera.length; i++) {
+        for (int i = 0; i < cola.length; i++) {
             try {
-                cajera[i].join();
+                cola[i].join();
             } catch (InterruptedException ex) {
                 Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
             }
         }
-        for (int i = 0; i < cola.length; i++) {
+        
+        for (int i = 0; i < cajera.length; i++) {
             try {
-                cola[i].join();
+                cajera[i].join();
             } catch (InterruptedException ex) {
                 Logger.getLogger(Principal.class.getName()).log(Level.SEVERE, null, ex);
             }

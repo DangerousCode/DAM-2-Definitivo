@@ -42,6 +42,12 @@ public class Syncro {
                 numcaja=2;
             }
         }
+        Principal.cuentapersonas++;
+        if(Principal.cuentapersonas==Principal.LONGCOLA-1){
+            for(int i=0;i<cajera.length;i++){
+                cajera[i].setFinjornada(true);
+            }
+        }
         return numcaja;
     }
     

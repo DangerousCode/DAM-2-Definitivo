@@ -50,7 +50,7 @@ public class Cajera extends Thread {
     public void run() {
         DecimalFormat dc=new DecimalFormat("0.00");
         int persona = 0;
-        while (Principal.cuentapersonas!=Principal.LONGCOLA-1) {
+        while (!finjornada) {
             try {
                 Thread.sleep(1000);
             } catch (InterruptedException ex) {
