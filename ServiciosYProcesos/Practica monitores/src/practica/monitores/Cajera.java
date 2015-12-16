@@ -56,7 +56,9 @@ public class Cajera extends Thread {
             } catch (InterruptedException ex) {
                 Logger.getLogger(Cajera.class.getName()).log(Level.SEVERE, null, ex);
             }
-            sync.despertar();
+            if(!ocupada){
+                sync.despertar();
+            }
         }
         ventanas[id-1].escribecadena("La recaudacion de esta caja es: " + dc.format(recaudacion) + " euros");
     }
